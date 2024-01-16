@@ -1,0 +1,310 @@
+<div id="form-section" class="pt-5">
+  <div class="container py-5">
+    <div class="mx-auto col-sm-12 col-md-9 col-lg-8">
+      <div class="card px-3 py-4">
+        <div class="row mb-5">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <img src="./assets/images/logo-new.svg" alt="" />
+          </div>
+
+          <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-items-center">
+            <h3 class="blog-title text-blue">Quote Request Form</h3>
+          </div>
+        </div>
+
+        <form lang="en" #q="ngForm" (ngSubmit)="send(q)">
+          <!-- 1 -->
+          <div class="border bg-light mb-4 p-4">
+            <b>1</b><span class="ml-3">Origin & Destination</span>
+
+            <div class="row">
+              <!-- pickup location -->
+              <div class="col-sm-12 col-lg-6">
+                <div class="form-outline mt-3">
+                  <label class="form-label">Pickup Location</label>
+                  <i class="fa fa-flag mr-2 trailing text-blue"></i>
+                  <input
+                    ngModel
+                    name="from"
+                    type="text"
+                    class="form-control"
+                    #inputFrom
+                    (input)="findCityByZipCodeFrom(inputFrom.value)"
+                    [matAutocomplete]="from"
+                    required
+                  />
+
+                  <mat-autocomplete #from="matAutocomplete">
+                    <mat-option
+                      [value]="
+                        searchResultFrom().city +
+                        ', ' +
+                        searchResultFrom().state +
+                        ' ' +
+                        inputFrom.value
+                      "
+                    >
+                      {{ searchResultFrom().city }}
+                    </mat-option>
+                  </mat-autocomplete>
+                </div>
+              </div>
+
+              <!-- delivery location -->
+              <div class="col-sm-12 col-lg-6">
+                <div class="form-outline mt-3">
+                  <label class="form-label">Delivery Location</label>
+                  <i class="fa fa-flag mr-2 trailing text-blue"></i>
+                  <input
+                    ngModel
+                    name="to"
+                    type="text"
+                    class="form-control"
+                    #inputTo
+                    (input)="findCityByZipCodeTo(inputTo.value)"
+                    [matAutocomplete]="to"
+                    required
+                  />
+
+                  <mat-autocomplete #to="matAutocomplete">
+                    <mat-option
+                      [value]="
+                        searchResultTo().city +
+                        ', ' +
+                        searchResultTo().state +
+                        ' ' +
+                        inputTo.value
+                      "
+                    >
+                      {{ searchResultTo().city }}
+                    </mat-option>
+                  </mat-autocomplete>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="border bg-light mb-4 p-4">
+            <b>2</b><span class="ml-3">Vehicle Details</span>
+
+            <div class="row">
+              <!-- year -->
+              <div class="col-sm-12 col-md-3">
+                <div class="form-outline mt-3">
+                  <label class="form-label">Year</label>
+                  <input
+                    ngModel
+                    name="year"
+                    type="text"
+                    class="form-control"
+                    required
+                    minlength="3"
+                  />
+                </div>
+              </div>
+
+              <!-- make -->
+              <div class="col-sm-12 col-md-4">
+                <div class="form-outline mt-3">
+                  <label class="form-label">Make</label>
+                  <input
+                    ngModel
+                    name="make"
+                    type="text"
+                    class="form-control"
+                    required
+                    minlength="3"
+                    #makeInput
+                    [matAutocomplete]="makeSelect"
+                  />
+
+                  <mat-autocomplete #makeSelect="matAutocomplete">
+                    <mat-option
+                      *ngFor="
+                        let option of model | async | search : makeInput.value
+                      "
+                      [value]="option.name"
+                    >
+                      {{ option.name }}
+                    </mat-option>
+                  </mat-autocomplete>
+                </div>
+              </div>
+
+              <!-- model -->
+              <div class="col-sm-12 col-md-5">
+                <div class="form-outline mt-3">
+                  <label class="form-label">Model</label>
+                  <input
+                    ngModel
+                    name="model"
+                    type="text"
+                    class="form-control"
+                    required
+                    minlength="3"
+                    #modelInput
+                    [matAutocomplete]="carSelect"
+                  />
+
+                  <mat-autocomplete #carSelect="matAutocomplete">
+                    <mat-option
+                      *ngFor="
+                        let option of car | async | search : modelInput.value
+                      "
+                      [value]="option.Model"
+                    >
+                      {{ option.Model }}
+                    </mat-option>
+                  </mat-autocomplete>
+                </div>
+              </div>
+
+              <!-- radio btn -->
+              <div class="col-sm-12 col-lg-6">
+                <div class="form-outline mt-3 pt-1">
+                  <i class="fa fa-truck trailing text-blue"></i>
+                  <div class="form-control h-auto">
+                    <div class="row">
+                      <div class="col-sm-12 col-xl-6 pr-0">
+                        <input
+                          ngModel
+                          name="truck"
+                          value="Open/Standart"
+                          id="qwe1"
+                          checked
+                          type="radio"
+                          class="mr-2"
+                        />
+                        <label class="mb-0" for="qwe1">Open/Standard</label>
+                      </div>
+                      <div class="col-sm-12 col-xl-6 pr-0">
+                        <input
+                          ngModel
+                          name="truck"
+                          value="Enclosed"
+                          id="qwe2"
+                          type="radio"
+                          class="mr-2"
+                        />
+                        <label class="mb-0" for="qwe2">Enclosed</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- radio btn -->
+              <div class="col-sm-12 col-lg-6">
+                <div class="form-outline mt-3 pt-1">
+                  <i class="fa fa-truck trailing text-blue"></i>
+                  <div class="form-control h-auto">
+                    <div class="row">
+                      <div class="col-sm-12 col-xl-6">
+                        <input
+                          ngModel
+                          name="driver"
+                          value="Vehicle drives"
+                          id="qw1"
+                          checked
+                          type="radio"
+                          class="mr-2"
+                        />
+                        <label class="mb-0" for="qw1">Vehicle drives</label>
+                      </div>
+                      <div class="col-sm-12 col-xl-6">
+                        <input
+                          ngModel
+                          name="driver"
+                          value="Inoperable"
+                          id="qw2"
+                          type="radio"
+                          class="mr-2"
+                        />
+                        <label class="mb-0" for="qw2">Inoperable</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="border bg-light mb-2 p-4">
+            <b>3</b><span class="ml-4">Shipment Details</span>
+
+            <div class="row">
+              <!-- date -->
+              <div class="col-sm-12 col-lg-6">
+                <div class="form-outline mt-3">
+                  <label for="qw1">Date</label>
+                  <i class="fa fa-calendar-days mr-2 trailing text-blue"></i>
+                  <input
+                    ngModel
+                    name="date"
+                    type="date"
+                    class="form-control"
+                    value="dd.mm.YYYY"
+                  />
+                </div>
+              </div>
+
+              <!-- name -->
+              <div class="col-sm-12 col-lg-6">
+                <div class="form-outline mt-3">
+                  <label class="form-label">Name</label>
+                  <i class="fa fa-user mr-2 trailing text-blue"></i>
+                  <input
+                    ngModel
+                    name="name"
+                    type="text"
+                    class="form-control"
+                    placeholder="John Doe"
+                  />
+                </div>
+              </div>
+
+              <!-- email -->
+              <div class="col-sm-12 col-lg-6">
+                <div class="form-outline mt-3">
+                  <label class="form-label">Email</label>
+                  <i class="fa fa-envelope mr-2 trailing text-blue"></i>
+                  <input
+                    ngModel
+                    name="email"
+                    type="email"
+                    class="form-control"
+                    placeholder="name@domain.com"
+                  />
+                </div>
+              </div>
+
+              <!-- name -->
+              <div class="col-sm-12 col-lg-6">
+                <div class="form-outline mt-3">
+                  <label class="form-label">Phone</label>
+                  <i class="fa fa-phone mr-2 trailing text-blue"></i>
+                  <input
+                    ngModel
+                    name="phone"
+                    type="text"
+                    class="form-control"
+                    placeholder="+(__) ___-__-__"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="gform_button button mt-4 d-block mx-auto"
+            type="submit"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

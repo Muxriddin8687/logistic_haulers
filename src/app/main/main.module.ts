@@ -36,6 +36,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
 import { SearchPipe } from '../core/pipes/search.pipe';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { GetquoteComponent } from './pages/getquote/getquote.component';
+import { ReviewsCarouselComponent } from './components/reviews-carousel/reviews-carousel.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +59,8 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
     SpecializedCarComponent,
     AboutUsComponent,
     ContactUsComponent,
+    GetquoteComponent,
+    ReviewsCarouselComponent
   ],
   imports: [
     MainRoutingModule,

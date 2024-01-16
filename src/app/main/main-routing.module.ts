@@ -12,6 +12,7 @@ import { FlatbedCarComponent } from './pages/carriers/flatbed-car/flatbed-car.co
 import { SpecializedCarComponent } from './pages/carriers/specialized-car/specialized-car.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { GetquoteComponent } from './pages/getquote/getquote.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'about-us', component: AboutUsComponent },
       { path: 'contact-us', component: ContactUsComponent },
+      { path: 'get-quote', component: GetquoteComponent },
 
       // customers routers
       {
