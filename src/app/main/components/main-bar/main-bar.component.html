@@ -2,12 +2,10 @@
 
     <div class="form-block flex-column">
 
-        <!-- <h2 class="mb-5">{{ 'home.title' | translate }}</h2> -->
-
         <div class="animate three" style="margin-left: 5%;">
             <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>&nbsp;
             <span>t</span><span>o</span>&nbsp;
-            <span>D</span><span>P</span><span>L</span>
+            <span>C</span><span>D</span><span>B</span>
         </div>
 
         <form #f="ngForm" (submit)="send(f)" data-aos="fade-up" data-aos-duration="1000">
@@ -17,13 +15,11 @@
 
                 <!-- from input -->
                 <div class="form-outline">
-                    <input ngModel name="from" type="text" placeholder="{{ 'form.from' | translate }}" #inputFrom
-                        (input)="findCityByZipCodeFrom(inputFrom.value)" [matAutocomplete]="from" required>
+                    <input ngModel name="from" type="text" placeholder="{{ 'form.from' | translate }}" #inputFrom (input)="findCityByZipCodeFrom(inputFrom.value)" [matAutocomplete]="from" required>
                     <i class="fa fa-map-marker-alt"></i>
 
                     <mat-autocomplete #from="matAutocomplete">
-                        <mat-option
-                            [value]="searchResultFrom().city + ', ' + searchResultFrom().state + ' ' + inputFrom.value">
+                        <mat-option [value]="searchResultFrom().city + ', ' + searchResultFrom().state + ' ' + inputFrom.value">
                             {{ searchResultFrom().city }}
                         </mat-option>
                     </mat-autocomplete>
@@ -32,13 +28,11 @@
 
                 <!-- to inout -->
                 <div class="form-outline">
-                    <input ngModel name="to" type="text" placeholder="{{ 'form.to' | translate }}" #inputTo
-                        (input)="findCityByZipCodeTo(inputTo.value)" [matAutocomplete]="to" required>
+                    <input ngModel name="to" type="text" placeholder="{{ 'form.to' | translate }}" #inputTo (input)="findCityByZipCodeTo(inputTo.value)" [matAutocomplete]="to" required>
                     <i class="fa fa-map-marker-alt"></i>
 
                     <mat-autocomplete #to="matAutocomplete">
-                        <mat-option
-                            [value]="searchResultTo().city + ', ' + searchResultTo().state + ' ' + inputTo.value">
+                        <mat-option [value]="searchResultTo().city + ', ' + searchResultTo().state + ' ' + inputTo.value">
                             {{ searchResultTo().city }}
                         </mat-option>
                     </mat-autocomplete>
@@ -47,8 +41,7 @@
 
                 <!-- change date -->
                 <div class="form-outline">
-                    <input ngModel name="date" style="padding-left: 55px;" placeholder="mm/dd/yy" matInput
-                        [matDatepicker]="picker" readonly required>
+                    <input ngModel name="date" style="padding-left: 55px;" placeholder="mm/dd/yy" matInput [matDatepicker]="picker" readonly required>
                     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
                 </div>
@@ -63,8 +56,7 @@
                     </label>
                 </div>
                 <div class="radio-btn mx-2">
-                    <input ngModel type="radio" class="form-check-input" name="truck" value="enclosed" id="enclosed"
-                        required>
+                    <input ngModel type="radio" class="form-check-input" name="truck" value="enclosed" id="enclosed" required>
                     <label class="form-check-label" for="enclosed">
                         <img loading="lazy" src="./assets/truck1.png" width="30px" alt="">
                         {{ 'form.enclosed' | translate }}
@@ -91,32 +83,28 @@
 
                 <!-- frist name -->
                 <div class="form-outline">
-                    <input ngModel name="first_name" type="text" placeholder="{{ 'form.first_name' | translate }}"
-                        required minlength="3">
+                    <input ngModel name="first_name" type="text" placeholder="{{ 'form.first_name' | translate }}" required minlength="3">
                     <i class="fa fa-user"></i>
                 </div>
 
 
                 <!-- last name -->
                 <div class="form-outline">
-                    <input ngModel name="last_name" type="text" placeholder="{{ 'form.last_name' | translate }}"
-                        required minlength="3">
+                    <input ngModel name="last_name" type="text" placeholder="{{ 'form.last_name' | translate }}" required minlength="3">
                     <i class="fa fa-user"></i>
                 </div>
 
 
                 <!-- phone -->
                 <div class="form-outline">
-                    <input ngModel name="phone" type="text" placeholder="{{ 'form.phone' | translate }}" required
-                        minlength="6">
+                    <input ngModel name="phone" type="text" placeholder="{{ 'form.phone' | translate }}" required minlength="6">
                     <i class="fa fa-phone"></i>
                 </div>
 
 
                 <!-- email -->
                 <div class="form-outline">
-                    <input ngModel name="email" type="email" placeholder="{{ 'form.email' | translate }}" required
-                        minlength="8">
+                    <input ngModel name="email" type="email" placeholder="{{ 'form.email' | translate }}" required minlength="8">
                     <i class="fa fa-envelope"></i>
                 </div>
 
@@ -153,21 +141,18 @@
 
                 <!-- car's year -->
                 <div class="form-outline">
-                    <input ngModel name="year" type="text" placeholder="{{ 'form.year' | translate }}" required
-                        minlength="3">
+                    <input ngModel name="year" type="text" placeholder="{{ 'form.year' | translate }}" required minlength="3">
                     <i class="fa fa-car"></i>
                 </div>
 
 
                 <!-- car brand -->
                 <div class="form-outline">
-                    <input ngModel name="make" type="text" placeholder="{{ 'form.make' | translate }}" required
-                        minlength="3" #makeInput [matAutocomplete]="makeSelect">
+                    <input ngModel name="make" type="text" placeholder="{{ 'form.make' | translate }}" required minlength="3" #makeInput [matAutocomplete]="makeSelect">
                     <i class="fa fa-car"></i>
 
                     <mat-autocomplete #makeSelect="matAutocomplete">
-                        <mat-option *ngFor="let option of (model | async) | search:makeInput.value"
-                            [value]="option.name">
+                        <mat-option *ngFor="let option of (model | async) | search:makeInput.value" [value]="option.name">
                             {{option.name}}
                         </mat-option>
                     </mat-autocomplete>
@@ -176,13 +161,11 @@
 
                 <!-- car model -->
                 <div class="form-outline">
-                    <input ngModel name="model" type="text" placeholder="{{ 'form.model' | translate }}" required
-                        minlength="3" #modelInput [matAutocomplete]="carSelect">
+                    <input ngModel name="model" type="text" placeholder="{{ 'form.model' | translate }}" required minlength="3" #modelInput [matAutocomplete]="carSelect">
                     <i class="fa fa-car"></i>
 
                     <mat-autocomplete #carSelect="matAutocomplete">
-                        <mat-option *ngFor="let option of (car | async) | search:modelInput.value"
-                            [value]="option.Model">
+                        <mat-option *ngFor="let option of (car | async) | search:modelInput.value" [value]="option.Model">
                             {{option.Model}}
                         </mat-option>
                     </mat-autocomplete>
@@ -191,13 +174,11 @@
 
                 <!-- car type -->
                 <div class="form-outline">
-                    <input ngModel name="type" type="text" placeholder="{{ 'form.type' | translate }}" required
-                        minlength="3" #typeInput [matAutocomplete]="typeSelect">
+                    <input ngModel name="type" type="text" placeholder="{{ 'form.type' | translate }}" required minlength="3" #typeInput [matAutocomplete]="typeSelect">
                     <i class="fa fa-car"></i>
 
                     <mat-autocomplete #typeSelect="matAutocomplete">
-                        <mat-option *ngFor="let option of (type | async) | search:typeInput.value"
-                            [value]="option.name">
+                        <mat-option *ngFor="let option of (type | async) | search:typeInput.value" [value]="option.name">
                             {{option.name}}
                         </mat-option>
                     </mat-autocomplete>
@@ -209,15 +190,13 @@
                     <button type="button" (click)="three = false; two = true;" class="form-btn me-3">
                         <i class="fa fa-arrow-left"></i>
                     </button>
-                    <button type="submit" [disabled]="f.invalid" (click)="three = false; one = true;"
-                        class="form-btn px-3">{{ 'form.submit' | translate }}</button>
+                    <button type="submit" [disabled]="f.invalid" (click)="three = false; one = true;" class="form-btn px-3">{{ 'form.submit' | translate }}</button>
                 </div>
 
 
                 <!-- submit btn -->
                 <div class="pc-show">
-                    <button type="submit" [disabled]="f.invalid" (click)="three = false; one = true;"
-                        class="form-btn px-3">{{ 'form.submit' | translate }}</button>
+                    <button type="submit" [disabled]="f.invalid" (click)="three = false; one = true;" class="form-btn px-3">{{ 'form.submit' | translate }}</button>
                 </div>
             </div>
         </form>

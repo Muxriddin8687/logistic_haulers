@@ -67,7 +67,7 @@ export class NavbarComponent {
       label: "Carriers page",
     },
     {
-      key: "DPL About us page",
+      key: "CDB About us page",
       value: '<a href="/about-us">About us</a>',
       label: "About us",
     },

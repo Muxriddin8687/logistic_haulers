@@ -12,7 +12,7 @@ declare let AOS: any;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'DPL';
+  title = 'CDB';
 
   constructor(private router: Router,
     private _googleAnalytics: GoogleAnalyticsService,

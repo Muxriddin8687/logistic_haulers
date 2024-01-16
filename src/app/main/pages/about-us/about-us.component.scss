@@ -6,8 +6,13 @@
 
 
 
-.tablet-show { display: block; }
-.mobile-show { display: none; }
+.tablet-show {
+    display: block;
+}
+
+.mobile-show {
+    display: none;
+}
 
 .portraits-box {
     width: 100%;
@@ -89,8 +94,14 @@
 
 
 @media screen and (max-width: 769px) {
-    .tablet-show { display: none; }
-    .mobile-show { display: block; }
+    .tablet-show {
+        display: none;
+    }
+
+    .mobile-show {
+        display: block;
+    }
+
     .portraits-box {
         display: none;
     }

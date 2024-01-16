@@ -15,18 +15,17 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
 import { HomeComponent } from './pages/home/home.component';
-import { OnlineCarBuyersComponent } from './pages/customers/auto/online-car-buyers/online-car-buyers.component';
-import { PrivateDealersComponent } from './pages/customers/auto/private-dealers/private-dealers.component';
-import { DealarshipsComponent } from './pages/customers/auto/dealarships/dealarships.component';
-import { AuctionsComponent } from './pages/customers/auto/auctions/auctions.component';
-import { OpenCarComponent } from './pages/carriers/auto/open-car/open-car.component';
-import { EnclosedCarComponent } from './pages/carriers/auto/enclosed-car/enclosed-car.component';
-import { FlatbedCarComponent } from './pages/carriers/auto/flatbed-car/flatbed-car.component';
-import { SpecializedCarComponent } from './pages/carriers/auto/specialized-car/specialized-car.component';
+import { OnlineCarBuyersComponent } from './pages/customers/online-car-buyers/online-car-buyers.component';
+import { PrivateDealersComponent } from './pages/customers/private-dealers/private-dealers.component';
+import { DealarshipsComponent } from './pages/customers/dealarships/dealarships.component';
+import { AuctionsComponent } from './pages/customers/auctions/auctions.component';
+import { OpenCarComponent } from './pages/carriers/open-car/open-car.component';
+import { EnclosedCarComponent } from './pages/carriers/enclosed-car/enclosed-car.component';
+import { FlatbedCarComponent } from './pages/carriers/flatbed-car/flatbed-car.component';
+import { SpecializedCarComponent } from './pages/carriers/specialized-car/specialized-car.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { NewsCarouselComponent } from './components/news-carousel/news-carousel.component';
 import { MainBarComponent } from './components/main-bar/main-bar.component';
 import { FixedButtonsComponent } from './components/fixed-buttons/fixed-buttons.component';
 import { SectionTitleComponent } from './components/section-title/section-title.component';
@@ -44,7 +43,6 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    NewsCarouselComponent,
     MainBarComponent,
     FixedButtonsComponent,
     SectionTitleComponent,

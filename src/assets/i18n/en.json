@@ -114,7 +114,7 @@
                 "c-text1": "These manufacturers produce products or components that are used as parts in another company's finished product. For example, a car manufacturer may purchase engines from an OEM to use in their vehicles.",
                 "c-title2": "Contract Manufacturers (CMs)",
                 "c-text2": "Contract manufacturers are hired by companies to produce their products on a contractual basis. These manufacturers often specialize in a specific process or industry and they may take care of the entire production process from design to assembly.",
-                "c-title3": "Custom Manufacturers", 
+                "c-title3": "Custom Manufacturers",
                 "c-text3": "Custom manufacturers produce products according to the specific requirements and specifications provided by a client. These manufacturers often work closely with the client to design and manufacture unique products that meet their specific needs.",
                 "c-title4": "Mass Manufacturers",
                 "c-text4": "Mass manufacturers produce products in large quantities using assembly line production techniques. These manufacturers often focus on high-volume production and may have automated processes to increase efficiency.",
@@ -450,7 +450,7 @@
         }
     },
     "home": {
-        "title": "Welcome to DPL",
+        "title": "Welcome to CDB",
         "aboutTitle": "Fill Out the Form to get the best quote",
         "section1": "News",
         "section2": "Car Shipping",
@@ -474,8 +474,8 @@
         "readmore": "Read more"
     },
     "about": {
-        "title": "Diamond Pro Logistics",
-        "text": "Diamond Pro Logistics is a modern, fast-growing, cutting-edge company based in the United States, handling all aspects of transportation within the US and Canada.",
+        "title": "CDB Haulers Logistics",
+        "text": "CDB Haulers Logistics is a modern, fast-growing, cutting-edge company based in the United States, handling all aspects of transportation within the US and Canada.",
         "title1": "Freight Transportation LTL and FTL",
         "text1": "Our professionals could manage all aspects of full truckload, partial truckload, and less than truckload shipments throughout the US and Canada, as well as the streamlined paperwork, simple payment options, quick serving with the best quality, unique offers for each client, round-the-clock customer support, and so on.",
         "section": "Vision, Mission & Goals",
