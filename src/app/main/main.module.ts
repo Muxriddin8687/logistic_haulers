@@ -90,6 +90,6 @@ export class MainModule { }
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+  return new TranslateHttpLoader(http, 'https://muxriddin8687.github.io/logistic_haulers/assets/i18n/', '.json');
 }
 
