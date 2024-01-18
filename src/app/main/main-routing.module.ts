@@ -23,7 +23,7 @@ const routes: Routes = [
     path: '',
     component: MainComponent,
     children: [
-      { path: 'home', component: HomeComponent },
+      { path: '', component: HomeComponent },
       { path: 'about-us', component: AboutUsComponent },
       { path: 'contact-us', component: ContactUsComponent },
       { path: 'get-quote', component: GetquoteComponent },
@@ -51,7 +51,7 @@ const routes: Routes = [
         ]
       },
 
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: '', redirectTo: '', pathMatch: 'full' },
       { path: '**', redirectTo: 'home', pathMatch: 'full' }
     ]
   },
