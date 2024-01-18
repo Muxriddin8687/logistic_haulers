@@ -1,211 +1,444 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light py-0" (scroll)="onWindowScroll();">
-	<div class="container px-0">
+<nav
+  class="navbar sticky-top navbar-expand-lg navbar-light bg-light py-0"
+  (scroll)="onWindowScroll()"
+>
+  <div class="container px-0">
+    <div class="toggler-nav">
+      <div class="d-flex">
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarId"
+          aria-controls="navbarId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <div class="d-block">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </button>
+      </div>
 
-		<div class="toggler-nav">
-			<div class="d-flex">
-				<button class="navbar-toggler collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId" aria-expanded="false" aria-label="Toggle navigation">
-					<div class="d-block">
-						<div class="bar1"></div>
-						<div class="bar2"></div>
-						<div class="bar3"></div>
-					</div>
-				</button>
-			</div>
+      <a class="navbar-brand me-0" routerLink="/">
+        <img
+          *ngIf="toggleIcon"
+          class="rounded"
+          src="./assets/logo.jpg"
+          width="155px"
+        />
+        <img *ngIf="!toggleIcon" src="./assets/dark_logo.png" width="155px" />
+      </a>
+    </div>
 
-			<a class="navbar-brand me-0" routerLink="home">
-				<img *ngIf="toggleIcon" class="rounded" src="./assets/logo.jpg" width="155px" />
-				<img *ngIf="!toggleIcon" src="./assets/dark_logo.png" width="155px" />
-			</a>
-		</div>
+    <!-- default desktop navbar -->
+    <div class="collapse navbar-collapse" id="navbarId">
+      <div class="w-100 d-flex align-items-center justify-content-between">
+        <a class="navbar-brand mt-2 mt-lg-0" routerLink="/">
+          <img
+            *ngIf="toggleIcon"
+            class="rounded"
+            src="./assets/logo.jpg"
+            width="155px"
+          />
+          <img *ngIf="!toggleIcon" src="./assets/dark_logo.png" width="155px" />
+        </a>
 
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              routerLinkActive="active"
+              id="dropdown1"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+              >Customers</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdown1">
+              <div class="navbar-dropdown">
+                <div class="navbar-dropdown-item">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="navbar-dropdown-link"
+                        routerLink="customers/online-car-buyers"
+                        routerLinkActive="active"
+                        >Online Auto Buyers</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="navbar-dropdown-link"
+                        routerLink="customers/private-dealers"
+                        routerLinkActive="active"
+                        >Private Auto Sellers</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="navbar-dropdown-link"
+                        routerLink="customers/dealerships"
+                        routerLinkActive="active"
+                        >Dealerships</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="navbar-dropdown-link"
+                        routerLink="customers/auctions"
+                        routerLinkActive="active"
+                        >Auctions</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              link=""
+              id="dropdown2"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+              >Carriers</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdown2">
+              <div class="navbar-dropdown">
+                <div class="navbar-dropdown-item">
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="navbar-dropdown-link"
+                        routerLink="carriers/open-car-haulers"
+                        routerLinkActive="active"
+                        >Open Car Haulers</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="navbar-dropdown-link"
+                        routerLink="carriers/enclosed-car-haulers"
+                        routerLinkActive="active"
+                        >Enclosed Car Haulers</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="navbar-dropdown-link"
+                        routerLink="carriers/flatbed-car-trailers"
+                        routerLinkActive="active"
+                        >Flatbed Car Trailers</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="navbar-dropdown-link"
+                        routerLink="carriers/specialized-cars"
+                        routerLinkActive="active"
+                        >Specialized Cars,<br />Heavy Truck Haulers</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="about-us" routerLinkActive="active"
+              >About&nbsp;Us</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="contact-us"
+              routerLinkActive="active"
+              >Contact&nbsp;Us</a
+            >
+          </li>
+          <li class="nav-item">
+            <div class="nav-link dropdown">
+              <a
+                class="dropdown-toggle"
+                href="#"
+                id="lang"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa fa-globe"></i>
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="lang"
+                style="
+                  z-index: 9999 !important;
+                  right: 0 !important;
+                  min-width: fit-content !important;
+                "
+              >
+                <li (click)="selectLanguage('en')">
+                  <div class="dropdown-item" href="#">
+                    <img
+                      src="./assets/eng.png"
+                      alt="Language icon"
+                      width="20px"
+                    />
+                    English
+                  </div>
+                </li>
+                <li (click)="selectLanguage('es')">
+                  <div class="dropdown-item" href="#">
+                    <img
+                      src="./assets/esp.png"
+                      alt="Language icon"
+                      width="20px"
+                    />
+                    Spanish
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
 
+    <!-- mobile navbar -->
+    <div class="mobile-navbar" id="navbarId">
+      <div class="container-fluid">
+        <div class="accordion" id="accordionNavbar">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="menuOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#menuOneCollapse"
+                aria-expanded="false"
+                aria-controls="menuOneCollapse"
+              >
+                Customers
+              </button>
+            </h2>
+            <div
+              id="menuOneCollapse"
+              class="accordion-collapse collapse"
+              aria-labelledby="menuOne"
+              data-mdb-parent="#accordionNavbar"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled">
+                  <li
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarId"
+                    aria-controls="navbarId"
+                  >
+                    <a
+                      class="navbar-dropdown-link"
+                      routerLink="customers/online-car-buyers"
+                      routerLinkActive="active"
+                      >Online Car Buyers</a
+                    >
+                  </li>
+                  <li
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarId"
+                    aria-controls="navbarId"
+                  >
+                    <a
+                      class="navbar-dropdown-link"
+                      routerLink="customers/private-dealers"
+                      routerLinkActive="active"
+                      >Private Dealers</a
+                    >
+                  </li>
+                  <li
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarId"
+                    aria-controls="navbarId"
+                  >
+                    <a
+                      class="navbar-dropdown-link"
+                      routerLink="customers/dealerships"
+                      routerLinkActive="active"
+                      >Dealerships</a
+                    >
+                  </li>
+                  <li
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarId"
+                    aria-controls="navbarId"
+                  >
+                    <a
+                      class="navbar-dropdown-link"
+                      routerLink="customers/auctions"
+                      routerLinkActive="active"
+                      >Auctions</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="menuTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#menuTwoCollapse"
+                aria-expanded="false"
+                aria-controls="menuTwoCollapse"
+              >
+                Carriers
+              </button>
+            </h2>
+            <div
+              id="menuTwoCollapse"
+              class="accordion-collapse collapse"
+              aria-labelledby="menuTwo"
+              data-mdb-parent="#accordionNavbar"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled">
+                  <li
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarId"
+                    aria-controls="navbarId"
+                  >
+                    <a
+                      class="navbar-dropdown-link"
+                      routerLink="carriers/open-car-haulers"
+                      routerLinkActive="active"
+                      >Open Car Haulers</a
+                    >
+                  </li>
+                  <li
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarId"
+                    aria-controls="navbarId"
+                  >
+                    <a
+                      class="navbar-dropdown-link"
+                      routerLink="carriers/enclosed-car-haulers"
+                      routerLinkActive="active"
+                      >Enclosed Car Haulers</a
+                    >
+                  </li>
+                  <li
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarId"
+                    aria-controls="navbarId"
+                  >
+                    <a
+                      class="navbar-dropdown-link"
+                      routerLink="carriers/flatbed-car-trailers"
+                      routerLinkActive="active"
+                      >Flatbed Car Trailers</a
+                    >
+                  </li>
+                  <li
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarId"
+                    aria-controls="navbarId"
+                  >
+                    <a
+                      class="navbar-dropdown-link"
+                      routerLink="carriers/specialized-cars"
+                      routerLinkActive="active"
+                      >Specialized Cars,<br />Heavy Truck Haulers</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="menuFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#menuFourCollapse"
+                aria-expanded="false"
+                aria-controls="menuFourCollapse"
+              >
+                Company
+              </button>
+            </h2>
+            <div
+              id="menuFourCollapse"
+              class="accordion-collapse collapse"
+              aria-labelledby="menuFour"
+              data-mdb-parent="#accordionNavbar"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled">
+                  <li
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarId"
+                    aria-controls="navbarId"
+                  >
+                    <a
+                      class="navbar-dropdown-link"
+                      routerLink="about-us"
+                      routerLinkActive="active"
+                      >About Us</a
+                    >
+                  </li>
+                  <li
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarId"
+                    aria-controls="navbarId"
+                  >
+                    <a
+                      class="navbar-dropdown-link"
+                      routerLink="contact-us"
+                      routerLinkActive="active"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
-		<!-- default desktop navbar -->
-		<div class="collapse navbar-collapse" id="navbarId">
-			<div class="w-100 d-flex align-items-center justify-content-between">
-
-				<a class="navbar-brand mt-2 mt-lg-0" routerLink="home">
-					<img *ngIf="toggleIcon" class="rounded" src="./assets/logo.jpg" width="155px" />
-					<img *ngIf="!toggleIcon" src="./assets/dark_logo.png" width="155px" />
-				</a>
-
-				<ul class="navbar-nav mb-2 mb-lg-0">
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" routerLinkActive="active" id="dropdown1" role="button" data-mdb-toggle="dropdown" aria-expanded="false">Customers</a>
-						<div class="dropdown-menu" aria-labelledby="dropdown1">
-							<div class="navbar-dropdown">
-								<div class="navbar-dropdown-item">
-									<ul class="list-unstyled">
-										<li>
-											<a class="navbar-dropdown-link" routerLink="customers/online-car-buyers" routerLinkActive="active">Online Auto Buyers</a>
-										</li>
-										<li>
-											<a class="navbar-dropdown-link" routerLink="customers/private-dealers" routerLinkActive="active">Private Auto Sellers</a>
-										</li>
-										<li>
-											<a class="navbar-dropdown-link" routerLink="customers/dealerships" routerLinkActive="active">Dealerships</a>
-										</li>
-										<li>
-											<a class="navbar-dropdown-link" routerLink="customers/auctions" routerLinkActive="active">Auctions</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" link="" id="dropdown2" role="button" data-mdb-toggle="dropdown" aria-expanded="false">Carriers</a>
-						<div class="dropdown-menu" aria-labelledby="dropdown2">
-							<div class="navbar-dropdown">
-								<div class="navbar-dropdown-item">
-									<ul class="list-unstyled">
-										<li>
-											<a class="navbar-dropdown-link" routerLink="carriers/open-car-haulers" routerLinkActive="active">Open Car Haulers</a>
-										</li>
-										<li>
-											<a class="navbar-dropdown-link" routerLink="carriers/enclosed-car-haulers" routerLinkActive="active">Enclosed Car Haulers</a>
-										</li>
-										<li>
-											<a class="navbar-dropdown-link" routerLink="carriers/flatbed-car-trailers" routerLinkActive="active">Flatbed Car Trailers</a>
-										</li>
-										<li>
-											<a class="navbar-dropdown-link" routerLink="carriers/specialized-cars" routerLinkActive="active">Specialized Cars,<br />Heavy Truck Haulers</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" routerLink="about-us" routerLinkActive="active">About&nbsp;Us</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" routerLink="contact-us" routerLinkActive="active">Contact&nbsp;Us</a>
-					</li>
-					<li class="nav-item">
-						<div class="nav-link dropdown">
-							<a class="dropdown-toggle" href="#" id="lang" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-								<i class="fa fa-globe"></i>
-							</a>
-							<ul class="dropdown-menu" aria-labelledby="lang" style="z-index: 9999 !important; right: 0 !important; min-width: fit-content !important;">
-								<li (click)="selectLanguage('en')">
-									<div class="dropdown-item" href="#">
-										<img src="./assets/eng.png" alt="Language icon" width="20px">
-										English
-									</div>
-								</li>
-								<li (click)="selectLanguage('es')">
-									<div class="dropdown-item" href="#">
-										<img src="./assets/esp.png" alt="Language icon" width="20px">
-										Spanish
-									</div>
-								</li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-
-			</div>
-
-		</div>
-
-
-
-		<!-- mobile navbar -->
-		<div class="mobile-navbar" id="navbarId">
-			<div class="container-fluid">
-
-
-				<div class="accordion" id="accordionNavbar">
-					<div class="accordion-item">
-						<h2 class="accordion-header" id="menuOne">
-							<button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#menuOneCollapse" aria-expanded="false" aria-controls="menuOneCollapse">
-								Customers
-							</button>
-						</h2>
-						<div id="menuOneCollapse" class="accordion-collapse collapse" aria-labelledby="menuOne" data-mdb-parent="#accordionNavbar">
-							<div class="accordion-body">
-								<ul class="list-unstyled">
-									<li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-										<a class="navbar-dropdown-link" routerLink="customers/online-car-buyers" routerLinkActive="active">Online Car Buyers</a>
-									</li>
-									<li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-										<a class="navbar-dropdown-link" routerLink="customers/private-dealers" routerLinkActive="active">Private Dealers</a>
-									</li>
-									<li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-										<a class="navbar-dropdown-link" routerLink="customers/dealerships" routerLinkActive="active">Dealerships</a>
-									</li>
-									<li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-										<a class="navbar-dropdown-link" routerLink="customers/auctions" routerLinkActive="active">Auctions</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="accordion-item">
-						<h2 class="accordion-header" id="menuTwo">
-							<button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#menuTwoCollapse" aria-expanded="false" aria-controls="menuTwoCollapse">
-								Carriers
-							</button>
-						</h2>
-						<div id="menuTwoCollapse" class="accordion-collapse collapse" aria-labelledby="menuTwo" data-mdb-parent="#accordionNavbar">
-							<div class="accordion-body">
-								<ul class="list-unstyled">
-									<li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-										<a class="navbar-dropdown-link" routerLink="carriers/open-car-haulers" routerLinkActive="active">Open Car Haulers</a>
-									</li>
-									<li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-										<a class="navbar-dropdown-link" routerLink="carriers/enclosed-car-haulers" routerLinkActive="active">Enclosed Car Haulers</a>
-									</li>
-									<li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-										<a class="navbar-dropdown-link" routerLink="carriers/flatbed-car-trailers" routerLinkActive="active">Flatbed Car Trailers</a>
-									</li>
-									<li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-										<a class="navbar-dropdown-link" routerLink="carriers/specialized-cars" routerLinkActive="active">Specialized Cars,<br />Heavy Truck Haulers</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="accordion-item">
-						<h2 class="accordion-header" id="menuFour">
-							<button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#menuFourCollapse" aria-expanded="false" aria-controls="menuFourCollapse">
-								Company
-							</button>
-						</h2>
-						<div id="menuFourCollapse" class="accordion-collapse collapse" aria-labelledby="menuFour" data-mdb-parent="#accordionNavbar">
-							<div class="accordion-body">
-								<ul class="list-unstyled">
-									<li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-										<a class="navbar-dropdown-link" routerLink="about-us" routerLinkActive="active">About Us</a>
-									</li>
-									<li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-										<a class="navbar-dropdown-link" routerLink="contact-us" routerLinkActive="active">Contact Us</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-				<div class="mt-5 px-4">
-					<div class="d-flex mt-5 justify-content-center">
-						<button type="button" (click)="selectLanguage('en')" data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId" class="btn p-0 nav-link shadow-0">
-							<img src="./assets/eng.png" alt="Language icon" width="20px">
-							ENG
-						</button>
-						<span class="mx-2">|</span>
-						<button type="button" (click)="selectLanguage('es')" data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId" class="btn p-0 nav-link shadow-0">
-							<img src="./assets/esp.png" alt="Language icon" width="20px">
-							ESP
-						</button>
-					</div>
-				</div>
-
-
-			</div>
-		</div>
-
-	</div>
+        <div class="mt-5 px-4">
+          <div class="d-flex mt-5 justify-content-center">
+            <button
+              type="button"
+              (click)="selectLanguage('en')"
+              data-mdb-toggle="collapse"
+              data-mdb-target="#navbarId"
+              aria-controls="navbarId"
+              class="btn p-0 nav-link shadow-0"
+            >
+              <img src="./assets/eng.png" alt="Language icon" width="20px" />
+              ENG
+            </button>
+            <span class="mx-2">|</span>
+            <button
+              type="button"
+              (click)="selectLanguage('es')"
+              data-mdb-toggle="collapse"
+              data-mdb-target="#navbarId"
+              aria-controls="navbarId"
+              class="btn p-0 nav-link shadow-0"
+            >
+              <img src="./assets/esp.png" alt="Language icon" width="20px" />
+              ESP
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>
