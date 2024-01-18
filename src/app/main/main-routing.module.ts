@@ -13,6 +13,10 @@ import { SpecializedCarComponent } from './pages/carriers/specialized-car/specia
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { GetquoteComponent } from './pages/getquote/getquote.component';
+import { DistributionComponent } from './pages/customers/distribution/distribution.component';
+import { ManufacturesComponent } from './pages/customers/manufactures/manufactures.component';
+import { RecyclersComponent } from './pages/customers/recyclers/recyclers.component';
+
 
 const routes: Routes = [
   {
@@ -30,8 +34,10 @@ const routes: Routes = [
           { path: 'online-car-buyers', component: OnlineCarBuyersComponent },
           { path: 'private-dealers', component: PrivateDealersComponent },
           { path: 'dealerships', component: DealarshipsComponent },
-          { path: 'auctions', component: AuctionsComponent }
-
+          { path: 'auctions', component: AuctionsComponent },
+          { path: 'distribution', component: DistributionComponent },
+          { path: 'manufactures', component: ManufacturesComponent },
+          { path: 'recyclers', component: RecyclersComponent }
         ]
       },
 

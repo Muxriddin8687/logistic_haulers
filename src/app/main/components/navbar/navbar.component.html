@@ -29,12 +29,13 @@
 					<img *ngIf="!toggleIcon" src="./assets/dark_logo.png" width="155px" />
 				</a>
 
-				<ul class="navbar-nav mb-2 mb-lg-0">
+				<ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" routerLinkActive="active" id="dropdown1" role="button" data-mdb-toggle="dropdown" aria-expanded="false">Customers</a>
 						<div class="dropdown-menu" aria-labelledby="dropdown1">
 							<div class="navbar-dropdown">
-								<div class="navbar-dropdown-item">
+								<div class="navbar-dropdown-item border-end">
+									<h4 class="mb-0">Auto Transportation Customers</h4>
 									<ul class="list-unstyled">
 										<li>
 											<a class="navbar-dropdown-link" routerLink="customers/online-car-buyers" routerLinkActive="active">Online Auto Buyers</a>
@@ -47,6 +48,20 @@
 										</li>
 										<li>
 											<a class="navbar-dropdown-link" routerLink="customers/auctions" routerLinkActive="active">Auctions</a>
+										</li>
+									</ul>
+								</div>
+								<div class="navbar-dropdown-item">
+									<h4 class="mb-0">Freight Transportation Customers</h4>
+									<ul class="list-unstyled">
+										<li>
+											<a class="navbar-dropdown-link" routerLink="customers/manufactures" routerLinkActive="active">Manufacturers and warehouses</a>
+										</li>
+										<li>
+											<a class="navbar-dropdown-link" routerLink="customers/recyclers" routerLinkActive="active">Recyclers</a>
+										</li>
+										<li>
+											<a class="navbar-dropdown-link" routerLink="customers/distribution" routerLinkActive="active">Distributors</a>
 										</li>
 									</ul>
 								</div>
@@ -105,6 +120,7 @@
 					</li>
 				</ul>
 
+				<div style="width: 160px; background: transparent; height: 100%;"></div>
 			</div>
 
 		</div>
@@ -125,6 +141,7 @@
 						</h2>
 						<div id="menuOneCollapse" class="accordion-collapse collapse" aria-labelledby="menuOne" data-mdb-parent="#accordionNavbar">
 							<div class="accordion-body">
+								<h4 class="mb-0">Auto Transportation Customers</h4>
 								<ul class="list-unstyled">
 									<li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
 										<a class="navbar-dropdown-link" routerLink="customers/online-car-buyers" routerLinkActive="active">Online Car Buyers</a>
@@ -137,6 +154,19 @@
 									</li>
 									<li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
 										<a class="navbar-dropdown-link" routerLink="customers/auctions" routerLinkActive="active">Auctions</a>
+									</li>
+								</ul>
+
+								<h4 class="mb-0">Freight Transportation Customers</h4>
+								<ul class="list-unstyled">
+									<li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
+										<a class="navbar-dropdown-link" routerLink="customers/manufactures" routerLinkActive="active">Manufacturers and warehouses</a>
+									</li>
+									<li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
+										<a class="navbar-dropdown-link" routerLink="customers/recyclers" routerLinkActive="active">Recyclers</a>
+									</li>
+									<li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
+										<a class="navbar-dropdown-link" routerLink="customers/distribution" routerLinkActive="active">Distribution Centers</a>
 									</li>
 								</ul>
 							</div>

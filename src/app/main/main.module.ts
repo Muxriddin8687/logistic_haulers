@@ -38,6 +38,9 @@ import { SearchPipe } from '../core/pipes/search.pipe';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { GetquoteComponent } from './pages/getquote/getquote.component';
 import { ReviewsCarouselComponent } from './components/reviews-carousel/reviews-carousel.component';
+import { DistributionComponent } from './pages/customers/distribution/distribution.component';
+import { ManufacturesComponent } from './pages/customers/manufactures/manufactures.component';
+import { RecyclersComponent } from './pages/customers/recyclers/recyclers.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +63,10 @@ import { ReviewsCarouselComponent } from './components/reviews-carousel/reviews-
     AboutUsComponent,
     ContactUsComponent,
     GetquoteComponent,
-    ReviewsCarouselComponent
+    ReviewsCarouselComponent,
+    DistributionComponent,
+    ManufacturesComponent,
+    RecyclersComponent
   ],
   imports: [
     MainRoutingModule,

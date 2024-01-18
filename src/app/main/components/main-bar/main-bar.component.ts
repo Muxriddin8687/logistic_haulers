@@ -35,7 +35,7 @@ export class MainBarComponent {
   type: Observable<any> = new Observable();
 
 
-  
+
 
   constructor(
     private http: HttpClient,
@@ -51,10 +51,13 @@ export class MainBarComponent {
   ngAfterViewInit(): void {
     const media = this.videoRef.nativeElement;
     media.muted = true;
-    media.play();
-    setInterval(() => {
-      media.play()
-    }, 2000);
+
+    let interval = setInterval(() => {
+      if (media) {
+        media.play();
+        clearInterval(interval);
+      }
+    }, 500);
   }
 
 
