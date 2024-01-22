@@ -1,10 +1,10 @@
 <app-bread-crumbs [img_url]="'operator.jpg'">
     <div class="w-100">
         <h1 data-aos="fade-up" data-aos-duration="2000" class="text-light">
-            Contact CDB
+            {{ "menu.contact_us" | translate }}
         </h1>
         <p data-aos="fade-up" data-aos-duration="2500" class="text-light my-4">
-            We'd love to hear from you
+            {{ "footer.contact_us_text" | translate }}
         </p>
     </div>
 </app-bread-crumbs>
@@ -15,30 +15,30 @@
 
             <form #f="ngForm" (submit)="send(f)" class="text-center">
                 <mat-form-field class="w-100">
-                    <mat-label>Name</mat-label>
+                    <mat-label>{{ "form.fullname" | translate }}</mat-label>
                     <input type="text" matInput ngModel name="name" required minlength="3">
                 </mat-form-field>
 
                 <mat-form-field class="w-100">
-                    <mat-label>Phone</mat-label>
+                    <mat-label>{{ "form.phone" | translate }}</mat-label>
                     <input type="text" matInput ngModel name="phone" required minlength="7">
                 </mat-form-field>
 
                 <mat-form-field class="w-100">
-                    <mat-label>Email</mat-label>
+                    <mat-label>{{ "form.email" | translate }}</mat-label>
                     <input type="email" matInput ngModel name="email" required minlength="6">
                 </mat-form-field>
 
                 <mat-form-field class="w-100">
-                    <mat-label>Message</mat-label>
+                    <mat-label>{{ "form.message" | translate }}</mat-label>
                     <textarea matInput ngModel name="message" required cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="3"></textarea>
                 </mat-form-field>
 
-                <button [disabled]="f.invalid" class="btn-warning btn" type="submit">Send</button>
+                <button [disabled]="f.invalid" class="btn-warning btn" type="submit">{{ "form.submit" | translate }}</button>
             </form>
         </div>
         <div class="col-11 col-sm-10 col-md-5 mt-5 mx-auto contact-links">
-            <h2>CDB Haulers Logistics</h2>
+            <h2>{{ "about.title" | translate }}</h2>
             <a target="_blank" href="https://maps.app.goo.gl/Q2vGPHvWsFsqkyDY6">
                 <i class="fa fa-map-marker-alt"></i>
                 8765 14th Ave Apt 1, Brooklyn, NY, 11228

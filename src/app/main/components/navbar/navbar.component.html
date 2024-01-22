@@ -21,44 +21,44 @@
     <div class="collapse navbar-collapse" id="navbarId">
       <div class="w-100 d-flex align-items-center justify-content-between">
 
-        <a class="navbar-brand mt-2 mt-lg-0" routerLink="home">
+        <a class="navbar-brand mt-2 mt-lg-0" routerLink="/">
           <img *ngIf="toggleIcon" class="rounded" src="./assets/logo.jpg" width="155px" />
           <img *ngIf="!toggleIcon" src="./assets/dark_logo.png" width="155px" />
         </a>
 
         <ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" routerLinkActive="active" id="dropdown1" role="button" data-mdb-toggle="dropdown" aria-expanded="false">Customers</a>
+            <a class="nav-link dropdown-toggle" routerLinkActive="active" id="dropdown1" role="button" data-mdb-toggle="dropdown" aria-expanded="false">{{ "menu.customers" | translate }}</a>
             <div class="dropdown-menu" aria-labelledby="dropdown1">
               <div class="navbar-dropdown">
                 <div class="navbar-dropdown-item border-end">
-                  <h4 class="mb-0">Auto Transportation Customers</h4>
+                  <h4 class="mb-0">{{ "menu.auto" | translate }}</h4>
                   <ul class="list-unstyled">
                     <li>
-                      <a class="navbar-dropdown-link" routerLink="customers/online-car-buyers" routerLinkActive="active">Online Auto Buyers</a>
+                      <a class="navbar-dropdown-link" routerLink="customers/online-car-buyers" routerLinkActive="active">{{ "menu.car_buyers" | translate }}</a>
                     </li>
                     <li>
-                      <a class="navbar-dropdown-link" routerLink="customers/private-dealers" routerLinkActive="active">Private Auto Sellers</a>
+                      <a class="navbar-dropdown-link" routerLink="customers/private-dealers" routerLinkActive="active">{{ "menu.dealers" | translate }}</a>
                     </li>
                     <li>
-                      <a class="navbar-dropdown-link" routerLink="customers/dealerships" routerLinkActive="active">Dealerships</a>
+                      <a class="navbar-dropdown-link" routerLink="customers/dealerships" routerLinkActive="active">{{ "menu.dealerships" | translate }}</a>
                     </li>
                     <li>
-                      <a class="navbar-dropdown-link" routerLink="customers/auctions" routerLinkActive="active">Auctions</a>
+                      <a class="navbar-dropdown-link" routerLink="customers/auctions" routerLinkActive="active">{{ "menu.auctions" | translate }}</a>
                     </li>
                   </ul>
                 </div>
                 <div class="navbar-dropdown-item">
-                  <h4 class="mb-0">Freight Transportation Customers</h4>
+                  <h4 class="mb-0">{{ "menu.freight" | translate }}</h4>
                   <ul class="list-unstyled">
                     <li>
-                      <a class="navbar-dropdown-link" routerLink="customers/manufactures" routerLinkActive="active">Manufacturers and warehouses</a>
+                      <a class="navbar-dropdown-link" routerLink="customers/manufactures" routerLinkActive="active">{{ "menu.manufactures" | translate }}</a>
                     </li>
                     <li>
-                      <a class="navbar-dropdown-link" routerLink="customers/recyclers" routerLinkActive="active">Recyclers</a>
+                      <a class="navbar-dropdown-link" routerLink="customers/recyclers" routerLinkActive="active">{{ "menu.recyclers" | translate }}</a>
                     </li>
                     <li>
-                      <a class="navbar-dropdown-link" routerLink="customers/distribution" routerLinkActive="active">Distributors</a>
+                      <a class="navbar-dropdown-link" routerLink="customers/distribution" routerLinkActive="active">{{ "menu.distribution" | translate }}</a>
                     </li>
                   </ul>
                 </div>
@@ -66,22 +66,22 @@
             </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" link="" id="dropdown2" role="button" data-mdb-toggle="dropdown" aria-expanded="false">Carriers</a>
+            <a class="nav-link dropdown-toggle" link="" id="dropdown2" role="button" data-mdb-toggle="dropdown" aria-expanded="false">{{ "menu.carriers" | translate }}</a>
             <div class="dropdown-menu" aria-labelledby="dropdown2">
               <div class="navbar-dropdown">
                 <div class="navbar-dropdown-item">
                   <ul class="list-unstyled">
                     <li>
-                      <a class="navbar-dropdown-link" routerLink="carriers/open-car-haulers" routerLinkActive="active">Open Car Haulers</a>
+                      <a class="navbar-dropdown-link" routerLink="carriers/open-car-haulers" routerLinkActive="active">{{ "menu.car_haulers" | translate }}</a>
                     </li>
                     <li>
-                      <a class="navbar-dropdown-link" routerLink="carriers/enclosed-car-haulers" routerLinkActive="active">Enclosed Car Haulers</a>
+                      <a class="navbar-dropdown-link" routerLink="carriers/enclosed-car-haulers" routerLinkActive="active">{{ "menu.enclosed" | translate }}</a>
                     </li>
                     <li>
-                      <a class="navbar-dropdown-link" routerLink="carriers/flatbed-car-trailers" routerLinkActive="active">Flatbed Car Trailers</a>
+                      <a class="navbar-dropdown-link" routerLink="carriers/flatbed-car-trailers" routerLinkActive="active">{{ "menu.flatbed" | translate }}</a>
                     </li>
                     <li>
-                      <a class="navbar-dropdown-link" routerLink="carriers/specialized-cars" routerLinkActive="active">Specialized Cars,<br />Heavy Truck Haulers</a>
+                      <a class="navbar-dropdown-link" routerLink="carriers/specialized-cars" routerLinkActive="active">{{ "menu.specialized" | translate }}</a>
                     </li>
                   </ul>
                 </div>
@@ -89,10 +89,10 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="about-us" routerLinkActive="active">About&nbsp;Us</a>
+            <a class="nav-link" routerLink="about-us" routerLinkActive="active">{{ "menu.about_us" | translate }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="contact-us" routerLinkActive="active">Contact&nbsp;Us</a>
+            <a class="nav-link" routerLink="contact-us" routerLinkActive="active">{{ "menu.contact_us" | translate }}</a>
           </li>
           <li class="nav-item">
             <div class="nav-link dropdown">
@@ -132,37 +132,37 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="menuOne">
               <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#menuOneCollapse" aria-expanded="false" aria-controls="menuOneCollapse">
-                Customers
+                {{ "menu.customers" | translate }}
               </button>
             </h2>
             <div id="menuOneCollapse" class="accordion-collapse collapse" aria-labelledby="menuOne" data-mdb-parent="#accordionNavbar">
               <div class="accordion-body">
-                <h4 class="mb-0">Auto Transportation Customers</h4>
+                <h4 class="mb-0">{{ "menu.auto" | translate }}</h4>
                 <ul class="list-unstyled">
                   <li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-                    <a class="navbar-dropdown-link" routerLink="customers/online-car-buyers" routerLinkActive="active">Online Car Buyers</a>
+                    <a class="navbar-dropdown-link" routerLink="customers/online-car-buyers" routerLinkActive="active">Online Car Buyers{{ "menu.car_buyers" | translate }}</a>
                   </li>
                   <li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-                    <a class="navbar-dropdown-link" routerLink="customers/private-dealers" routerLinkActive="active">Private Dealers</a>
+                    <a class="navbar-dropdown-link" routerLink="customers/private-dealers" routerLinkActive="active">Private Dealers{{ "menu.dealers" | translate }}</a>
                   </li>
                   <li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-                    <a class="navbar-dropdown-link" routerLink="customers/dealerships" routerLinkActive="active">Dealerships</a>
+                    <a class="navbar-dropdown-link" routerLink="customers/dealerships" routerLinkActive="active">Dealerships{{ "menu.dealerships" | translate }}</a>
                   </li>
                   <li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-                    <a class="navbar-dropdown-link" routerLink="customers/auctions" routerLinkActive="active">Auctions</a>
+                    <a class="navbar-dropdown-link" routerLink="customers/auctions" routerLinkActive="active">Auctions{{ "menu.auctions" | translate }}</a>
                   </li>
                 </ul>
 
-                <h4 class="mb-0">Freight Transportation Customers</h4>
+                <h4 class="mb-0">{{ "menu.freight" | translate }}</h4>
                 <ul class="list-unstyled">
                   <li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-                    <a class="navbar-dropdown-link" routerLink="customers/manufactures" routerLinkActive="active">Manufacturers and warehouses</a>
+                    <a class="navbar-dropdown-link" routerLink="customers/manufactures" routerLinkActive="active">Manufacturers and warehouses{{ "menu.manufactures" | translate }}</a>
                   </li>
                   <li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-                    <a class="navbar-dropdown-link" routerLink="customers/recyclers" routerLinkActive="active">Recyclers</a>
+                    <a class="navbar-dropdown-link" routerLink="customers/recyclers" routerLinkActive="active">Recyclers{{ "menu.recyclers" | translate }}</a>
                   </li>
                   <li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-                    <a class="navbar-dropdown-link" routerLink="customers/distribution" routerLinkActive="active">Distribution Centers</a>
+                    <a class="navbar-dropdown-link" routerLink="customers/distribution" routerLinkActive="active">Distribution Centers{{ "menu.distribution" | translate }}</a>
                   </li>
                 </ul>
               </div>
@@ -171,23 +171,23 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="menuTwo">
               <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#menuTwoCollapse" aria-expanded="false" aria-controls="menuTwoCollapse">
-                Carriers
+                {{ "menu.carriers" | translate }}
               </button>
             </h2>
             <div id="menuTwoCollapse" class="accordion-collapse collapse" aria-labelledby="menuTwo" data-mdb-parent="#accordionNavbar">
               <div class="accordion-body">
                 <ul class="list-unstyled">
                   <li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-                    <a class="navbar-dropdown-link" routerLink="carriers/open-car-haulers" routerLinkActive="active">Open Car Haulers</a>
+                    <a class="navbar-dropdown-link" routerLink="carriers/open-car-haulers" routerLinkActive="active">{{ "menu.car_haulers" | translate }}</a>
                   </li>
                   <li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-                    <a class="navbar-dropdown-link" routerLink="carriers/enclosed-car-haulers" routerLinkActive="active">Enclosed Car Haulers</a>
+                    <a class="navbar-dropdown-link" routerLink="carriers/enclosed-car-haulers" routerLinkActive="active">{{ "menu.enclosed" | translate }}</a>
                   </li>
                   <li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-                    <a class="navbar-dropdown-link" routerLink="carriers/flatbed-car-trailers" routerLinkActive="active">Flatbed Car Trailers</a>
+                    <a class="navbar-dropdown-link" routerLink="carriers/flatbed-car-trailers" routerLinkActive="active">{{ "menu.flatbed" | translate }}</a>
                   </li>
                   <li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-                    <a class="navbar-dropdown-link" routerLink="carriers/specialized-cars" routerLinkActive="active">Specialized Cars,<br />Heavy Truck Haulers</a>
+                    <a class="navbar-dropdown-link" routerLink="carriers/specialized-cars" routerLinkActive="active">{{ "menu.specialized" | translate }}</a>
                   </li>
                 </ul>
               </div>
@@ -196,17 +196,17 @@
           <div class="accordion-item">
             <h2 class="accordion-header" id="menuFour">
               <button class="accordion-button collapsed" type="button" data-mdb-toggle="collapse" data-mdb-target="#menuFourCollapse" aria-expanded="false" aria-controls="menuFourCollapse">
-                Company
+                {{ "menu.company" | translate }}
               </button>
             </h2>
             <div id="menuFourCollapse" class="accordion-collapse collapse" aria-labelledby="menuFour" data-mdb-parent="#accordionNavbar">
               <div class="accordion-body">
                 <ul class="list-unstyled">
                   <li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-                    <a class="navbar-dropdown-link" routerLink="about-us" routerLinkActive="active">About Us</a>
+                    <a class="navbar-dropdown-link" routerLink="about-us" routerLinkActive="active">{{ "menu.about_us" | translate }}</a>
                   </li>
                   <li data-mdb-toggle="collapse" data-mdb-target="#navbarId" aria-controls="navbarId">
-                    <a class="navbar-dropdown-link" routerLink="contact-us" routerLinkActive="active">Contact Us</a>
+                    <a class="navbar-dropdown-link" routerLink="contact-us" routerLinkActive="active">{{ "menu.contact_us" | translate }}</a>
                   </li>
                 </ul>
               </div>
