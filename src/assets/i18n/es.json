@@ -512,6 +512,7 @@
         "specialized": "Coches especializados"
     },
     "form": {
+        "confi": "Al marcar esta casilla, acepta nuestros Términos y Política de privacidad, lo que nos permite enviar llamadas de ventas automáticas, mensajes de texto y mensajes de voz pregrabados al número de teléfono proporcionado. No se requiere su consentimiento para comprar ningún artículo, producto o servicio. Se pueden aplicar tarifas por mensajes y datos.",
         "address": "Dirección",
         "sendMessage": "Enviar mensaje",
         "click": "¡Hacer clic!",

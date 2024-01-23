@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation, inject, signal } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Observable } from 'rxjs';
+import Swal from 'sweetalert2';
 import { CarModel } from 'src/app/core/models/car.model';
 import { CarsService } from 'src/app/core/services/cars.service';
 import { MessageService } from 'src/app/core/services/message.service';
@@ -15,7 +16,7 @@ import { MessageService } from 'src/app/core/services/message.service';
 })
 export class GetquoteComponent implements OnInit {
 
-  private _sendMessageService = inject(MessageService);
+  private smsService = inject(MessageService);
   private _http = inject(HttpClient);
   private _carService = inject(CarsService);
 
@@ -64,10 +65,19 @@ export class GetquoteComponent implements OnInit {
 
     data = encodeURI(data);
 
-    // this._sendMessageService.sendEmail(data).subscribe(() => {
-    //   form.resetForm();
-    //   alert('Thank you for selecting us!');
-    // });
+
+
+    this.smsService.sendEmail('Auto Quote Form', data).subscribe(
+      (res) => {
+        if (res.success == true) {
+          this.smsService.sendSms(data, 'asddd').subscribe();
+          Swal.fire('Thank you', 'Your message has been sent successfully and we will contact you shortly.', 'success');
+          form.onReset();
+        } else
+          Swal.fire('Error', 'Please try again', 'warning');
+      },
+      (err) => console.log(err.message)
+    );
   }
 
   findCityByZipCodeFrom(zip_code: string) {

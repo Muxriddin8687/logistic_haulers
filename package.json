@@ -1,10 +1,10 @@
 {
-  "name": "logistic-dpl",
+  "name": "cdbhaulers",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --deploy-url https://muxriddin8687.github.io/logistic_haulers/ --base-href https://muxriddin8687.github.io/logistic_haulers/",
+    "build": "ng build --deploy-url https://cdbhaulers.com/ --base-href https://cdbhaulers.com/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

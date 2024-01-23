@@ -512,6 +512,7 @@
         "specialized": "Specialized Cars"
     },
     "form": {
+        "confi": "By checking this box, you agree to our Terms and Privacy Policy, allowing us to send automated sales calls, text messages, and prerecorded voicemails to the provided phone number. Your consent is not required for purchasing any items, commodities, or services. Message and data rates may apply.",
         "address": "Address",
         "sendMessage": "Send Message",
         "click": "Click!",

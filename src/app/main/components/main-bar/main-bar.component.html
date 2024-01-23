@@ -129,8 +129,7 @@
             </div>
 
 
-            <div class="form" [class.d-none]="!three" [class.zoom-in-zoom-out]="three">
-
+            <div class="form" style="top: -50px;" [class.d-none]="!three" [class.zoom-in-zoom-out]="three">
                 <!-- prev btn -->
                 <div class="pc-show">
                     <button type="button" (click)="three = false; two = true;" class="form-btn px-3">
@@ -197,6 +196,13 @@
                 <!-- submit btn -->
                 <div class="pc-show">
                     <button type="submit" [disabled]="f.invalid" (click)="three = false; one = true;" class="form-btn px-3">{{ 'form.submit' | translate }}</button>
+                </div>
+
+                <div class="confi">
+                    <input style="width: 20px !important;" class="form-check-input" type="checkbox" name="confi" ngModel required id="confi">
+                    <label for="confi" style="font-size: 11px; width: fit-content;">
+                        {{ "form.confi" | translate }}
+                    </label>
                 </div>
             </div>
         </form>

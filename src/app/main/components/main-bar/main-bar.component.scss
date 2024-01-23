@@ -96,6 +96,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: relative;
             width: 90%;
             margin: 0 auto;
             padding: 2px 3px;
@@ -202,6 +203,21 @@
     }
 }
 
+.confi {
+    position: absolute;
+    display: inline-flex;
+    top: 105%;
+    left: 0;
+    width: 100%;
+    padding: 2px 3px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+
+    &>* {
+        display: inline-block;
+    }
+}
 
 @media screen and (max-width: 992px) {
     #main-bar .form-block {
