@@ -486,7 +486,34 @@
         "title4": "Goals",
         "text4": "We are a team-based 3PL, and each team has its own mission and goals. Highly qualified and experienced members serve each customer in accordance with their needs and requirements, and we have already covered the two main transportation industries: auto shipping and freight shipment. As a result, each team member is responsible for carrying out their assigned tasks."
     },
+    "footer": {
+        "contact_us_text": "We'd love to hear from you",
+        "copyright": "© Copyright by CDB Haulers Logistics LLC. All Rights Reserved",
+        "text": "CDB Haulers Logistics is a modern, fast-growing, cutting-edge company based in the United States, handling all aspects of transportation within the US and Canada."
+    },
+    "menu": {
+        "company": "Company",
+        "customers": "Customers",
+        "auto": "Auto Transportation Customers",
+        "freight": "Freight Transportation Customers",
+        "carriers": "Carriers",
+        "about_us": "About Us",
+        "contact_us": "Contact Us",
+        "car_buyers": "Online Auto Buyers",
+        "dealers": "Private Auto Sellers",
+        "dealerships": "Dealerships",
+        "auctions": "Auctions",
+        "distribution": "Distributors",
+        "manufactures": "Manufacturers and warehouses",
+        "recyclers": "Recyclers",
+        "car_haulers": "Open Car Haulers",
+        "enclosed": "Enclosed Car Haulers",
+        "flatbed": "Flatbed Car Trailers",
+        "specialized": "Specialized Cars"
+    },
     "form": {
+        "confi": "By checking this box, you agree to our Terms and Privacy Policy, allowing us to send automated sales calls, text messages, and prerecorded voicemails to the provided phone number. Your consent is not required for purchasing any items, commodities, or services. Message and data rates may apply.",
+        "address": "Address",
         "sendMessage": "Send Message",
         "click": "Click!",
         "from": "From (Zip code)",
@@ -495,6 +522,8 @@
         "enclosed": "Enclosed",
         "first_name": "First name",
         "last_name": "Last name",
+        "fullname": "Full name",
+        "message": "Message",
         "phone": "Phone",
         "email": "Email",
         "year": "Year",

@@ -486,7 +486,34 @@
         "title4": "Objetivos",
         "text4": "Somos un 3PL basado en equipos, y cada equipo tiene su propia misión y objetivos. Miembros altamente calificados y experimentados atienden a cada cliente de acuerdo con sus necesidades y requisitos, y ya hemos cubierto las dos principales industrias de transporte: envío de automóviles y envío de carga. Como resultado, cada miembro del equipo es responsable de llevar a cabo las tareas asignadas."
     },
+    "footer": {
+        "contact_us_text": "Nos encantaría saber de usted",
+        "copyright": "© Copyright de CDB Haulers Logistics LLC. Reservados todos los derechos",
+        "text": "CDB Haulers Logistics es una empresa moderna, de rápido crecimiento y de vanguardia con sede en los Estados Unidos, que se encarga de todos los aspectos del transporte dentro de los EE. UU. y Canadá."
+    },
+    "menu": {
+        "company": "Compañía",
+        "customers": "Clientes",
+        "auto": "Clientes de transporte automático",
+        "freight": "Clientes de transporte de carga",
+        "carriers": "Transportistas",
+        "about_us": "Sobre nosotros",
+        "contact_us": "Contáctenos",
+        "car_buyers": "Compradores de automóviles en línea",
+        "dealers": "Vendedores de automóviles privados",
+        "dealerships": "Concesionarios",
+        "auctions": "Subastas",
+        "distribution": "Distribuidores",
+        "manufactures": "Fabricantes y almacenes",
+        "recyclers": "Recicladores",
+        "car_haulers": "Transportistas de autos abiertos",
+        "enclosed": "Transportadores de automóviles cerrados",
+        "flatbed": "Remolques de automóviles de plataforma",
+        "specialized": "Coches especializados"
+    },
     "form": {
+        "confi": "Al marcar esta casilla, acepta nuestros Términos y Política de privacidad, lo que nos permite enviar llamadas de ventas automáticas, mensajes de texto y mensajes de voz pregrabados al número de teléfono proporcionado. No se requiere su consentimiento para comprar ningún artículo, producto o servicio. Se pueden aplicar tarifas por mensajes y datos.",
+        "address": "Dirección",
         "sendMessage": "Enviar mensaje",
         "click": "¡Hacer clic!",
         "from": "Desde (código postal)",
@@ -495,6 +522,8 @@
         "enclosed": "Adjunto",
         "first_name": "Nombre de pila",
         "last_name": "Apellido",
+        "fullname": "Nombre completo",
+        "message": "Mensaje",
         "phone": "Teléfono",
         "email": "Email",
         "year": "Año",
