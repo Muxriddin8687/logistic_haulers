@@ -7,9 +7,12 @@
   }
 
   .trailing {
-    position: absolute;
+    top: 68%;
     bottom: 12px;
-    right: 10px;
     background: #fff;
+  }
+
+  &.truck-icons .trailing {
+    top: 50% !important;
   }
 }

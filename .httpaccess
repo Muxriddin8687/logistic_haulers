@@ -1,7 +1,0 @@
-RewriteEngine On
-ErrorDocument 404 ./index.html
-RewriteCond %{HTTPS} off
-RewriteCond %{HTTP:X-Forwarded-SSL} !on
-RewriteCond %{HTTP_HOST} ^cdbhaulers\.com$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.cdbhaulers\.com$
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]

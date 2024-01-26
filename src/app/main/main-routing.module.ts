@@ -53,7 +53,13 @@ const routes: Routes = [
 
       { path: '', redirectTo: '', pathMatch: 'full' },
       { path: '**', redirectTo: 'home', pathMatch: 'full' }
-    ]
+    ],
+  },
+  {
+    path: '', redirectTo: '', pathMatch: 'full'
+  },
+  {
+    path: '**', redirectTo: '', pathMatch: 'full'
   },
 ];
 
