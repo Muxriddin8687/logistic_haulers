@@ -195,11 +195,10 @@
 
 
 .confi {
-  position: absolute;
   display: inline-flex;
-  top: 105%;
-  left: 0;
-  width: 100%;
+  margin-left: 5%;
+  margin-top: 5px;
+  width: 90%;
   padding: 10px;
   border-radius: 10px;
   background-color: #fff;
@@ -214,6 +213,11 @@
   #main-bar .form-block {
     h2 {
       margin: 0 0 80px 10%;
+    }
+
+    .confi {
+      margin-left: 10%;
+      width: 80%;
     }
 
     .form {
@@ -268,20 +272,17 @@
       background-repeat: no-repeat;
       background-size: 100%;
 
-      .animate.three {
-        padding-bottom: 100px;
-      }
-
       .form {
         width: 90%;
-
-        &.confi-block {
-          top: -100px;
-        }
 
         .form-outline {
           margin-bottom: 10px;
         }
+      }
+
+      .confi {
+        margin-left: 5%;
+        width: 90%;
       }
     }
 
