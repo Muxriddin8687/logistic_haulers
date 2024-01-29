@@ -193,6 +193,7 @@
   }
 }
 
+
 .confi {
   position: absolute;
   display: inline-flex;
@@ -267,8 +268,16 @@
       background-repeat: no-repeat;
       background-size: 100%;
 
+      .animate.three {
+        padding-bottom: 100px;
+      }
+
       .form {
         width: 90%;
+
+        &.confi-block {
+          top: -100px;
+        }
 
         .form-outline {
           margin-bottom: 10px;

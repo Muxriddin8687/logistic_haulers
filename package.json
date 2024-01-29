@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --deploy-url https://cdbhaulers.com/ --base-href https://cdbhaulers.com/",
+    "build": "ng build --deploy-url https://cdbhaulersllc.com/ --base-href https://cdbhaulersllc.com/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
