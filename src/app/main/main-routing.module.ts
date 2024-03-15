@@ -16,6 +16,8 @@ import { GetquoteComponent } from './pages/getquote/getquote.component';
 import { DistributionComponent } from './pages/customers/distribution/distribution.component';
 import { ManufacturesComponent } from './pages/customers/manufactures/manufactures.component';
 import { RecyclersComponent } from './pages/customers/recyclers/recyclers.component';
+import { TermsComponent } from './pages/terms/terms.component';
+import { PrivancyComponent } from './pages/privancy/privancy.component';
 
 
 const routes: Routes = [
@@ -27,6 +29,8 @@ const routes: Routes = [
       { path: 'about-us', component: AboutUsComponent },
       { path: 'contact-us', component: ContactUsComponent },
       { path: 'get-quote', component: GetquoteComponent },
+      { path: 'terms', component: TermsComponent },
+      { path: 'privacy', component: PrivancyComponent },
 
       // customers routers
       {

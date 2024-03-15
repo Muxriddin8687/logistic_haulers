@@ -41,6 +41,8 @@ import { ReviewsCarouselComponent } from './components/reviews-carousel/reviews-
 import { DistributionComponent } from './pages/customers/distribution/distribution.component';
 import { ManufacturesComponent } from './pages/customers/manufactures/manufactures.component';
 import { RecyclersComponent } from './pages/customers/recyclers/recyclers.component';
+import { TermsComponent } from './pages/terms/terms.component';
+import { PrivancyComponent } from './pages/privancy/privancy.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { RecyclersComponent } from './pages/customers/recyclers/recyclers.compon
     ReviewsCarouselComponent,
     DistributionComponent,
     ManufacturesComponent,
-    RecyclersComponent
+    RecyclersComponent,
+    TermsComponent,
+    PrivancyComponent
   ],
   imports: [
     MainRoutingModule,
